@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/neobitcoin/neobitcoin.git"
+- "url": "https://github.com/neobitcoin-official/neobitcoin.git"
   "dir": "neobitcoin"
 files: []
 script: |
