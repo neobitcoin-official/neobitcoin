@@ -1,0 +1,26 @@
+[Unit]
+Description=NeoBitcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=neobitcoin
+Group=neobitcoin
+
+Type=forking
+PIDFile=/var/lib/neobitcoind/neobitcoind.pid
+
+ExecStart=/usr/bin/neobitcoind -daemon -pid=/var/lib/neobitcoind/neobitcoind.pid \
+          -conf=/etc/neobitcoin/neobitcoin.conf -datadir=/var/lib/neobitcoind
+
+ExecStop=-/usr/bin/neobitcoin-cli -conf=/etc/neobitcoin/neobitcoin.conf \
+         -datadir=/var/lib/neobitcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

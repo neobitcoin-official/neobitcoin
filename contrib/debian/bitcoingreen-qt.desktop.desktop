@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=NeoBitcoin
+Comment=NeoBitcoin P2P Cryptocurrency
+Exec=neobitcoin-qt %u
+Terminal=false
+Type=Application
+Icon=neobitcoin128
+MimeType=x-scheme-handler/neobitcoin;
+Categories=Office;Finance;
+Name[en_US]=neobitcoin-qt.desktop
